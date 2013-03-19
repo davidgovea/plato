@@ -45,21 +45,21 @@
   <div class="row">
     <div class="span6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"></i></a></h2>
-      <p class="stat">65.64</p>
+      <p class="stat">65.22</p>
     </div>
     <div class="span6">
       <h2 class="header">Estimated # Bugs  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs"></i></a></h2>
-      <p class="stat">2.00</p>
+      <p class="stat">2.08</p>
     </div>
   </div>
   <div class="row">
     <div class="span6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty"></i></a></h2>
-      <p class="stat">30.79</p>
+      <p class="stat">32.19</p>
     </div>
     <div class="span6">
       <h2 class="header">SLOC/LSLOC <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC"></i></h2>
-      <p class="stat">208 / 139</p>
+      <p class="stat">212 / 143</p>
     </div>
   </div>
 </div>
@@ -100,6 +100,7 @@ var fs = require('fs-extra');
 
 // vendor
 var _ = require('lodash');
+var coffee = require('coffee-script');
 
 // local lib
 var util = require('./util'),
@@ -148,17 +149,20 @@ exports.inspect = function(files, outputDir, options, done) {
     files.forEach(function(file) {
       if (options.exclude && options.exclude.test(file)) return;
 
+      var isCoffee = file.match(/\.coffee$/);
+
       if (options.recurse && fs.statSync(file).isDirectory()) {
         files = fs.readdirSync(file).map(function(innerFile){
           return path.join(file,innerFile);
         });
         runReports(files);
-      } else if (file.match(/\.js$/)) {
+      } else if (file.match(/\.js$/) || isCoffee) {
         log.info('Reading "%s"', file);
 
         var fileShort = file.replace(commonBasePath, '');
         var fileSafe = fileShort.replace(/[^a-zA-Z0-9]/g,'_');
         var source = fs.readFileSync(file).toString().trim();
+        if (isCoffee) source = coffee.compile(source);
         if (!source) {
           log.info('Not parsing empty file "%s"', file);
           return;

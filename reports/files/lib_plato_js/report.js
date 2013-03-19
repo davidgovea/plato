@@ -10,42 +10,42 @@ __report = {
       "line": 9,
       "complexity": {
         "sloc": {
-          "physical": 208,
-          "logical": 139
+          "physical": 212,
+          "logical": 143
         },
-        "cyclomatic": 12,
+        "cyclomatic": 14,
         "halstead": {
           "operators": {
-            "distinct": 19,
-            "total": 364,
+            "distinct": 20,
+            "total": 376,
             "identifiers": [
               "__stripped__"
             ]
           },
           "operands": {
-            "distinct": 141,
-            "total": 457,
+            "distinct": 146,
+            "total": 470,
             "identifiers": [
               "__stripped__"
             ]
           },
-          "length": 821,
-          "vocabulary": 160,
-          "difficulty": 30.790780141843975,
-          "volume": 6011.302965902524,
-          "effort": 185092.70798911923,
-          "bugs": 2.0037676553008414,
-          "time": 10282.928221617734
+          "length": 846,
+          "vocabulary": 166,
+          "difficulty": 32.19178082191781,
+          "volume": 6239.283358919499,
+          "effort": 200853.64237617565,
+          "bugs": 2.079761119639833,
+          "time": 11158.535687565314
         }
       }
     },
     "functions": [
       {
         "name": "exports.inspect",
-        "line": 35,
+        "line": 36,
         "complexity": {
           "sloc": {
-            "physical": 103,
+            "physical": 106,
             "logical": 21
           },
           "cyclomatic": 3,
@@ -76,7 +76,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 51,
+        "line": 52,
         "complexity": {
           "sloc": {
             "physical": 3,
@@ -110,10 +110,10 @@ __report = {
       },
       {
         "name": "runReports",
-        "line": 63,
+        "line": 64,
         "complexity": {
           "sloc": {
-            "physical": 51,
+            "physical": 54,
             "logical": 3
           },
           "cyclomatic": 2,
@@ -144,41 +144,41 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 64,
+        "line": 65,
         "complexity": {
           "sloc": {
-            "physical": 48,
-            "logical": 30
+            "physical": 51,
+            "logical": 33
           },
-          "cyclomatic": 8,
+          "cyclomatic": 10,
           "halstead": {
             "operators": {
-              "distinct": 13,
-              "total": 83,
-              "identifiers": [
-                "__stripped__"
-              ]
-            },
-            "operands": {
-              "distinct": 50,
+              "distinct": 14,
               "total": 92,
               "identifiers": [
                 "__stripped__"
               ]
             },
-            "length": 175,
-            "vocabulary": 63,
-            "difficulty": 11.96,
-            "volume": 1046.0239866124855,
-            "effort": 12510.446879885327,
-            "bugs": 0.3486746622041618,
-            "time": 695.024826660296
+            "operands": {
+              "distinct": 54,
+              "total": 102,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 194,
+            "vocabulary": 68,
+            "difficulty": 13.222222222222221,
+            "volume": 1180.9677912025659,
+            "effort": 15615.018572567258,
+            "bugs": 0.3936559304008553,
+            "time": 867.5010318092922
           }
         }
       },
       {
         "name": "<anonymous>",
-        "line": 68,
+        "line": 71,
         "complexity": {
           "sloc": {
             "physical": 3,
@@ -212,7 +212,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 92,
+        "line": 96,
         "complexity": {
           "sloc": {
             "physical": 10,
@@ -246,7 +246,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 116,
+        "line": 120,
         "complexity": {
           "sloc": {
             "physical": 3,
@@ -280,7 +280,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 120,
+        "line": 124,
         "complexity": {
           "sloc": {
             "physical": 16,
@@ -314,7 +314,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 121,
+        "line": 125,
         "complexity": {
           "sloc": {
             "physical": 14,
@@ -348,7 +348,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 125,
+        "line": 129,
         "complexity": {
           "sloc": {
             "physical": 9,
@@ -382,7 +382,7 @@ __report = {
       },
       {
         "name": "exports.getOverviewReport",
-        "line": 140,
+        "line": 144,
         "complexity": {
           "sloc": {
             "physical": 42,
@@ -416,7 +416,7 @@ __report = {
       },
       {
         "name": "<anonymous>",
-        "line": 154,
+        "line": 158,
         "complexity": {
           "sloc": {
             "physical": 19,
@@ -450,7 +450,7 @@ __report = {
       },
       {
         "name": "writeFile",
-        "line": 183,
+        "line": 187,
         "complexity": {
           "sloc": {
             "physical": 4,
@@ -484,7 +484,7 @@ __report = {
       },
       {
         "name": "writeReport",
-        "line": 188,
+        "line": 192,
         "complexity": {
           "sloc": {
             "physical": 9,
@@ -518,7 +518,7 @@ __report = {
       },
       {
         "name": "writeOverview",
-        "line": 198,
+        "line": 202,
         "complexity": {
           "sloc": {
             "physical": 8,
@@ -552,7 +552,7 @@ __report = {
       },
       {
         "name": "writeFileReport",
-        "line": 207,
+        "line": 211,
         "complexity": {
           "sloc": {
             "physical": 10,
@@ -585,7 +585,7 @@ __report = {
         }
       }
     ],
-    "maintainability": 65.64065356334332,
+    "maintainability": 65.21674678356695,
     "module": "lib/plato.js"
   },
   "jshint": {
